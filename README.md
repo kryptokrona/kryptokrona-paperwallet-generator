@@ -2,6 +2,8 @@
 
 **Kryptokrona Paper Wallet Generator**
 
+A simple paper wallet for generating new wallets and restoring keys from seed phrases.
+
 https://paper.kryptokrona.se
 
 ## LICENSE
