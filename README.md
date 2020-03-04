@@ -1,8 +1,8 @@
 # paper-turtle
 
-**TurtleCoin Paper Wallet Generator**
+**Kryptokrona Paper Wallet Generator**
 
-https://turtlecoin.lol/wallet
+https://paperwallet.kryptokrona.se
 
 ## LICENSE
 

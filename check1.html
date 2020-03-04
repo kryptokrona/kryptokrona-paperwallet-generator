@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TurtleCoin Wallet Generator</title>
+    <title>Kryptokrona Wallet Generator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
@@ -34,13 +34,13 @@
     
   </head>
   <body>
-    <section class="hero is-white is-fullheight">
+    <section class="hero is-black is-fullheight">
 
       <div class="hero-head">
 	<header class="navbar">
 	  <div class="container">
 	    <div class="navbar-brand">
-	      <a href="#" class="navbar-item is-size-3 has-text-weight-semibold"> TurtleCoin</a>
+	      <a href="#" class="navbar-item is-size-3 has-text-weight-semibold"> Kryptokrona</a>
 	      <span class="navbar-burger burger" data-target="navbarMenu">
 		<span></span>
 		<span></span>
@@ -51,14 +51,14 @@
 	    <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-start">
                 <a href="index.html" class="navbar-item">
-                  Main generator
+                  XKR Wallet Generator
                 </a>
 
-                <a href="identicon.html" class="navbar-item">
+                <a href="identicon.html" class="navbar-item" style="display:none;">
                   Custom identicon
                 </a>
 
-                <a href="check.html" class="navbar-item">
+                <a href="check.html" class="navbar-item" style="display:none;">
                   Address checker
                 </a>
             </div>
@@ -71,7 +71,7 @@
 
           <div class=" has-text-centered" style="margin:50px 0 50px 0;">
             <img src="./assets/img/logo.png" width="150" height="" />
-            <h1 class="subtitle is-size-5" style="margin-top:20px;">TurtleCoin Address Checker</h1>
+            <h1 class="subtitle is-size-5" style="margin-top:20px;">Kryptokrona Address Checker</h1>
             <hr>
           </div>
 
@@ -79,8 +79,8 @@
             <div class="column is-12 noprint has-text-centered">
 
 
-              <label for="address">Enter TRTL public address (regular or integrated)</label>
-              <input class="input" type="text" id="address" placeholder="TRTL..." />
+              <label for="address">Enter XKR public address</label>
+              <input class="input" type="text" id="address" placeholder="XKR..." />
               
               <div style="margin: 20px 0">
                 <button class="button is-dark d-print-noe" onclick="js:checkAddress();" type="button" value="Check Address">Check Address</button>
