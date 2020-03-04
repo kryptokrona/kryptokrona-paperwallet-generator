@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>Kryptokrona Wallet Generator</title>
     <meta charset="UTF-8">
@@ -20,7 +21,7 @@
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
         if ($navbarBurgers.length > 0) {
-          $navbarBurgers.forEach( el => {
+          $navbarBurgers.forEach(el => {
             el.addEventListener('click', () => {
               const target = el.dataset.target;
               const $target = document.getElementById(target);
@@ -30,24 +31,26 @@
           });
         }
       });
+
     </script>
 
   </head>
+
   <body>
     <section class="hero is-black is-fullheight">
       <div class="hero-head">
-	<header class="navbar">
-	  <div class="container">
-	    <div class="navbar-brand">
-	      <a href="" class="navbar-item is-size-3 has-text-weight-semibold"> Kryptokrona</a>
-	      <span class="navbar-burger burger" data-target="navbarMenu">
-		<span></span>
-		<span></span>
-		<span></span>
-	      </span>
-	    </div>
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="" class="navbar-item is-size-3 has-text-weight-semibold"> Kryptokrona</a>
+              <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
 
-	    <div id="navbarMenu" class="navbar-menu">
+            <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-start">
                 <a href="index.html" class="navbar-item">
                   XKR Wallet Generator
@@ -70,8 +73,8 @@
         <div class="container">
 
           <div class="columns noprint">
-            <div class="column is-12 notification is-danger has-text-centered noprint">
-	      <p class="noprint">Anything on this page in a pink colored box is <u><b>secret</u></b> and should not be shared!</p>
+            <div class="column is-12 notification is-warning has-text-centered noprint">
+              <p class="noprint">Anything on this page in a yellow colored box is <u><b>secret</u></b> and should not be shared!</p>
             </div>
           </div>
 
@@ -84,81 +87,81 @@
           <div class="columns">
             <div class="column is-12 noprint has-text-centered">
 
-	      <button class="button is-dark d-print-noe" onclick="js:show_generate();" type="button" value="Generate a wallet">Create a Wallet</button> or
-	      <button class="button is-dark noprint" onclick="js:show_restore();" type="button" value="restore keys from seed phrase">Restore keys from seed phrase</button>
+              <button class="button is-dark d-print-noe" onclick="js:show_generate();" type="button" value="Generate a wallet">Create a Wallet</button> or
+              <button class="button is-dark noprint" onclick="js:show_restore();" type="button" value="restore keys from seed phrase">Restore keys from seed phrase</button>
 
-	      <div id="generate" style="display:none;">
+              <div id="generate" style="display:none;">
 
-	        <p class="noprint" style="margin-top: 20px;">For extra security, type a few random letters, words, numbers, or symbols below.</p>
+                <p class="noprint" style="margin-top: 20px;">For extra security, type a few random letters, words, numbers, or symbols below.</p>
 
-	        <hr>
+                <hr>
 
-	        <div>
-	          <input id="user_entropy_widget" class="input" type="text" style="width:100%;" placeholder=" The more random stuff you type in this box, the better your keys will be." />
-	        </div>
+                <div>
+                  <input id="user_entropy_widget" class="input" type="text" style="width:100%;" placeholder=" The more random stuff you type in this box, the better your keys will be." />
+                </div>
 
-	        <hr>
+                <hr>
 
-	        <div>
-	          <button class="button is-black" onclick="js:genwallet(null);" type="button" value="Generate wallet">Generate</button>
-	        </div>
+                <div>
+                  <button class="button is-dark" onclick="js:genwallet(null);" type="button" value="Generate wallet">Generate</button>
+                </div>
 
-	      </div>
+              </div>
 
-	      <div id="restore" style="display: none;">
-	        <div>
-	          <input id="seed_phrase" class="input" type="text" style="width:100%;" value="" placeholder="Enter your seed phrase words here."/>
-	        </div>
+              <div id="restore" style="display: none;">
+                <div>
+                  <input id="seed_phrase" class="input" type="text" style="width:100%;" value="" placeholder="Enter your seed phrase words here." />
+                </div>
 
-	        <hr>
+                <hr>
 
-	        <div class="has-text-centered">
-	          <button class="button is-dark" onclick="js:restore_keys(null);" type="button" value="Restore keys">Restore Keys</button>
-	        </div>
-	      </div>
+                <div class="has-text-centered">
+                  <button class="button is-dark" onclick="js:restore_keys(null);" type="button" value="Restore keys">Restore Keys</button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="columns" id="step2" style="display:none;">
-	    <div class="column is-12 d-print-block" style="display:none;">
-	      <h3 class="subtitle is-size-5 d-print-block" style="display:none;">Identicon</h3>
+            <div class="column is-12 d-print-block" style="display:none;">
+              <h3 class="subtitle is-size-5 d-print-block" style="display:none;">Identicon</h3>
               <p>Look for this identicon when sending XKR to this address (with supported software)</p>
-	      <div id="identicon_widget" style="display:none"></div>
-	    </div>
-            <div  class="column is-12 d-print-block">
-	      <h3 class="subtitle is-size-5 d-print-block">Public Address</h3>
-	      <div class="notification is-info">
-	        <span style="font-family:monospace,monospace;word-break:break-all;" id="address_widget">Generating...</span>
-	      </div>
+              <div id="identicon_widget" style="display:none"></div>
+            </div>
+            <div class="column is-12 d-print-block">
+              <h3 class="subtitle is-size-5 d-print-block">Public Address</h3>
+              <div class="notification is-dark">
+                <span style="font-family:monospace,monospace;word-break:break-all;" id="address_widget">Generating...</span>
+              </div>
             </div>
           </div>
 
           <div class="columns" id="step3" style="display:none;">
             <div class="column is-12">
-	      <h3 class="subtitle is-size-5 d-print-block">Seed Phrase</h3>
-	      <div class="notification is-danger">
-	        <span style="font-family:monospace,monospace;word-wrap:break-word;" id="mnemonic_widget">Generating...</span>
-	      </div>
+              <h3 class="subtitle is-size-5 d-print-block">Seed Phrase</h3>
+              <div class="notification is-warning">
+                <span style="font-family:monospace,monospace;word-wrap:break-word;" id="mnemonic_widget">Generating...</span>
+              </div>
             </div>
           </div>
 
           <div class="columns" id="step4" style="display:none;">
-            <div  class="column is-12 d-print-block">
-	      <h3 class="subtitle is-size-5 d-print-block">View Key</h3>
-	      <div class="notification is-danger">
-	        <span style="font-family:monospace,monospace;word-break:break-all;" id="view_key_widget">Generating...</span>
-	      </div>
+            <div class="column is-12 d-print-block">
+              <h3 class="subtitle is-size-5 d-print-block">View Key</h3>
+              <div class="notification is-warning">
+                <span style="font-family:monospace,monospace;word-break:break-all;" id="view_key_widget">Generating...</span>
+              </div>
 
-	      <h3 class="subtitle is-size-5 d-print-block">Spend Key</h3>
-	      <div class="notification is-danger">
-	        <span style="font-family:monospace,monospace;word-break:break-all;" id="spend_key_widget">Generating...</span>
-	      </div>
+              <h3 class="subtitle is-size-5 d-print-block">Spend Key</h3>
+              <div class="notification is-warning">
+                <span style="font-family:monospace,monospace;word-break:break-all;" id="spend_key_widget">Generating...</span>
+              </div>
             </div>
           </div>
 
           <div class="columns">
             <div class="column is-12 noprint has-text-centered">
-	      <input type="button" onClick="window.print()" class="button is-black" value="Print This Page"/>
+              <input type="button" onClick="window.print()" class="button is-dark" value="Print This Page" />
             </div>
           </div>
         </div>
@@ -174,21 +177,21 @@
 
             <div class="column is-6 has-text-right">
 
-	      <a href="http://chat.kryptokrona.se/" class="button is-dark" style="background: #6c81ca;">
-	        <span class="icon">
-	          <i class="fab fa-discord"></i>
-	        </span>
+              <a href="http://chat.kryptokrona.se/" class="button is-dark" style="background: #6c81ca;">
+                <span class="icon">
+                  <i class="fab fa-discord"></i>
+                </span>
 
-	        <span>Discord</span>
-	      </a>
+                <span>Discord</span>
+              </a>
 
-	      <a href="http://github.com/kryptokrona" class="button is-dark">
-	        <span class="icon">
-	          <i class="fab fa-github"></i>
-	        </span>
+              <a href="http://github.com/kryptokrona" class="button is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
 
-	        <span>Github</span>
-	      </a>
+                <span>Github</span>
+              </a>
 
             </div>
           </div>
@@ -205,7 +208,7 @@
     <!-- For printing -->
 
     <div class="wallet print">
-      <img src="assets/img/keys.png"/>
+      <img src="assets/img/keys.png" />
       <div class="amount-added-text">Seed</div>
       <div class="note-text" id="mnemonic_widget_copy">Seed</div>
       <div class="date-text">Date</div>
@@ -228,7 +231,7 @@
       <div class="logo-text">
         <ul>
           <div class="logo">
-            <img class="logo" src="assets/img/logo.png"/>
+            <img class="logo" src="assets/img/logo.png" />
           </div>
           <li>
             <b>Kryptokrona</b>
@@ -239,4 +242,6 @@
 
 
   </body>
+
 </html>
+
