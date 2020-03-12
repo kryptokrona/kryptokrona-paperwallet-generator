@@ -16,6 +16,12 @@ body {
   color: white;
 }
 
+#seed_phrase {
+  background: hsl(0, 0%, 4%);
+  border: 1px solid white;
+  color: white;
+}
+
 ::-webkit-input-placeholder {
   font-size: 20px;
   text-align: center;

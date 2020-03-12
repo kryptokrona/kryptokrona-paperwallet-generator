@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  
+
   </script>
 
 </head>
@@ -26,38 +26,35 @@
 
     <div class="hero-body">
       <div class="container">
-    
+
         <div class="columns has-text-centered noprint">
           <div class="column is-12 notification is-white has-text-centered noprint">
             <p class="noprint">Anything on this page in a white colored box is <u><b>secret</u></b> and should not be
               shared!</p>
           </div>
         </div>
-    
+
         <div class=" has-text-centered" style="margin:50px 0 50px 0;">
           <img src="./assets/img/logo.png" width="150" height="" />
           <h1 class="subtitle is-size-6" style="margin-top:20px;">Kryptokrona paperwallet generator</h1>
           <hr>
         </div>
-    
+
         <div class="columns">
           <div class="column is-12 noprint has-text-centered">
-    
+
             <button class="button is-dark d-print-noe" onclick="js:show_generate();" type="button"
               value="Generate a wallet">Create a Wallet</button> or
             <button class="button is-dark noprint" onclick="js:show_restore();" type="button"
               value="restore keys from seed phrase">Restore keys from seed</button>
-    
-              <div id="generate" style="display:none;">
-    
-                <p class="noprint" style="margin-top: 20px;">For extra security, type a few random letters, words,
-                numbers, or symbols below.</p>
 
-              <hr>
+            <div id="generate" style="display:none;">
 
+              <p class="noprint" style="margin-top: 20px;">For good security, type a few random letters, words,
+                numbers, and or symbols below.</p>
+                <br>
               <div>
-                <input id="user_entropy_widget" class="input" type="text" style="width:100%;"
-                  placeholder=" The more random stuff you type in this box, the better your keys will be." />
+                <input id="user_entropy_widget" class="input" type="text" style="width:100%;" />
               </div>
 
               <hr>
@@ -70,9 +67,11 @@
             </div>
 
             <div id="restore" style="display: none;">
+
+              <p class="noprint" style="margin-top: 20px;">Paste your seed below to restore your keys.</p>
               <div>
-                <input id="seed_phrase" class="input" type="text" style="width:100%;" value=""
-                  placeholder="Enter your seed phrase words here." />
+                <br>
+                <input id="seed_phrase" class="input" type="text" style="width:100%;" value="" />
               </div>
 
               <hr>
