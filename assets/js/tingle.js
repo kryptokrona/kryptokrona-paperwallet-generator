@@ -36,7 +36,6 @@
 
         // extends config
         this.opts = extend({}, defaults, options);
-
         // init modal
         this.init();
     }

@@ -72,7 +72,6 @@
 // DENSO WAVE INCORPORATED
 // http://www.denso-wave.com/qrcode/faqpatent-e.html
 
-
 /*
  * js-sha3 v0.5.1
  * https://github.com/emn178/js-sha3

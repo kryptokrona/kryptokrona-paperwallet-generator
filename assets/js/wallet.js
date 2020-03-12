@@ -95,11 +95,6 @@ var genwallet = function(lang) {
   qr.make();
   document.getElementById('qrcodeView_copy').innerHTML = qr.createImgTag();
 
-  // wallet_keys_widget.innerHTML = keys.privateKeys;
-  //address_qr_widget.innerHTML = "";
-  //qr=new QRCode(address_qr_widget, {correctLevel:QRCode.CorrectLevel.L});
-  //qr.makeCode("DERO:"+keys.public_addr);
-
   document.getElementById("identicon_widget").innerHTML = "";
   var icon = document.createElement("canvas");
   icon.width = 128;
