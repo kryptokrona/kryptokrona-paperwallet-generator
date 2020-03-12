@@ -1,10 +1,9 @@
-/* Copyright (c) 2018, The TurtleCoin Developers
-//
+/* Copyright (c) 2020,  Kryptokrona Developers
 // Please see the included LICENSE file for more information.
 */
 
 body {
-  font-family: 'SF UI Display Medium',sans-serif;
+  font-family: 'SF UI Display Medium', sans-serif;
   font-weight: 100;
   overflow-y: visible;
   overflow-x: visible;
@@ -13,16 +12,29 @@ body {
 
 #user_entropy_widget {
   background: hsl(0, 0%, 4%);
+  border: 1px solid white;
   color: white;
 }
 
-.print {display: none;}
+::-webkit-input-placeholder {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+}
+
+.print {
+  display: none;
+}
 
 #select_identicon,
 #check_results {
   min-height: 270px;
 }
-#select_identicon canvas{
+
+#select_identicon canvas {
   margin: 10px;
   cursor: pointer;
 }
@@ -31,7 +43,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid rgba(0,0,0,.3);
+  border: 3px solid rgba(0, 0, 0, .3);
   border-radius: 50%;
   border-top-color: #000;
   animation: spin 1s ease-in-out infinite;
@@ -39,18 +51,23 @@ body {
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
-@media print  {
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@media print {
 
   .tingle-modal {
-    display:none;
+    display: none;
   }
-  
+
   .wallet {
     width: 1000px;
     height: 428px;
@@ -58,7 +75,8 @@ body {
     position: relative;
   }
 
-  .wallet img, .instruction img {
+  .wallet img,
+  .instruction img {
     width: 100%;
   }
 
@@ -69,7 +87,8 @@ body {
     border: 2px dotted #999999;
   }
 
-  .address_widget, .spend_key_widget {
+  .address_widget,
+  .spend_key_widget {
     position: absolute;
     right: 160px;
     width: 125px;
@@ -142,7 +161,9 @@ body {
     margin-bottom: 5px;
   }
 
-  .amount-added-text, .date-text, .note-text {
+  .amount-added-text,
+  .date-text,
+  .note-text {
     position: absolute;
     height: 20px;
     font-size: 10px;
@@ -152,7 +173,9 @@ body {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-  .amount-added-text, .date-text {
+
+  .amount-added-text,
+  .date-text {
     text-transform: uppercase;
   }
 
@@ -175,7 +198,8 @@ body {
     font-style: italic;
   }
 
-  .view_key_widget, .qr-view {
+  .view_key_widget,
+  .qr-view {
     position: absolute;
     font-size: 10px;
     -ms-transform: rotate(90deg);
@@ -186,6 +210,7 @@ body {
     text-transform: uppercase;
     top: 70px;
   }
+
   .view_key_widget {
     left: 50px;
     width: 100px;
@@ -196,7 +221,8 @@ body {
     top: 60px;
   }
 
-  .qr-secret, .qr-address {
+  .qr-secret,
+  .qr-address {
     position: absolute;
     right: 100px;
     height: 50px;
@@ -210,19 +236,23 @@ body {
     top: 275px;
   }
 
-  .qr-secret img, .qr-address img {
+  .qr-secret img,
+  .qr-address img {
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  .noprint  {
+
+  .noprint {
     display: none;
   }
+
   .print {
     display: block;
     display: relative;
     z-index: 999999999;
   }
+
   body {
     background-image: none;
     height: 750px;
@@ -230,14 +260,22 @@ body {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  .wallet {margin: 0;}
-  .container, .hero-body, .hero {
+
+  .wallet {
+    margin: 0;
+  }
+
+  .container,
+  .hero-body,
+  .hero {
     display: none;
   }
 
 }
+
 @media screen {
   .noscreen {
     display: none;
   }
 }
+
