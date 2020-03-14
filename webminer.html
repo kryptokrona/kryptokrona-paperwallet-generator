@@ -30,8 +30,9 @@
 
 		<br>
 		<div class="buttons">
-			<button onclick="updateValues();miner.start()"> Start mining! </button>
-			<button onclick="miner.stop();"> Stop mining! </button>
+			<!-- To do, make alerts without using alert() -->
+			<button onclick="updateValues();miner.start();alert('Mining is online')"> Start mining! </button>
+			<button onclick="miner.stop();alert('Mining is offline')"> Stop mining! </button>
 		</div>
 	</div>
 	<br>

@@ -87,6 +87,7 @@ input:hover {
 }
 
 button:hover {
+    
     background: rgb(17, 17, 17);
     color: rgb(129, 128, 128);
 }
