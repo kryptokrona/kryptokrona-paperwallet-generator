@@ -186,12 +186,27 @@ a:hover{
 }
 
 ::-webkit-input-placeholder {
+  color: #90f2ff8c;
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #90f2ff8c;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #90f2ff8c;;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #90f2ff8c;;
 }
 
 .print {
