@@ -1,7 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: rgb(10, 10, 10);
-    color: #bebebe;
+    background: rgb(1, 38, 63);
+    color: #90f2ff8c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,25 +11,25 @@ body {
 
 .wrapper {
     width: 500px;
-    background: #0f0f0f;
+    background: rgb(1, 33, 55);
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: start;
-    border: 1px solid rgb(49, 49, 49);
+    
     padding: 1rem;
     border-radius: 10px;
 }
 
 .footer-info {
     width: 500px;
-    background: #0f0f0f;
+    background: rgb(1, 33, 55);
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid rgb(49, 49, 49);
+    
     padding: 1rem;
     border-radius: 10px;
 }
@@ -68,10 +68,10 @@ button {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 100;
-    background: rgb(39, 39, 39);
-    color: rgb(241, 238, 238);
+    background: rgba(34, 74, 107, 0.774);
+    color: #90f2ff8c;
     display: flex;
-    border: 1px solid rgb(49, 47, 47);
+    border: 1px solid #90f2ff59;
     border-radius: 5px;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -81,26 +81,39 @@ button {
     padding: 15px;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #90f2ff59;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #90f2ff59;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #90f2ff59;
+  }
+
 input:hover {
-    background: rgb(17, 17, 17);
-    color: rgb(129, 128, 128);
+    background: rgba(1, 33, 55, 0.472);
+    color: #90f2ff8c;
 }
 
 button:hover {
     
-    background: rgb(17, 17, 17);
-    color: rgb(129, 128, 128);
+    background: rgb(1, 33, 55);
+    color: #90f2ff8c;
 }
 
 .footer-buttons,
 button:hover {
-    background: rgb(17, 17, 17);
-    color: rgb(129, 128, 128);
+    background: rgb(1, 33, 55);
+    color: #90f2ff;
 }
 
 img {
     justify-content: center;
-    height: 100px;
+    height: 30px;
     width: auto;
 }
 

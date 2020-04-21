@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-  <title>Kryptokrona paper wallet generator</title>
+  <title> Kryptokrona paper wallet generator</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
@@ -20,7 +20,39 @@
 </head>
 
 <body>
-  <section class="hero is-black is-fullheight">
+  <section class="hero is-fullheight">
+    <div class="menu">
+
+      <a href="https://kryptokrona.se/" class="btn-default">
+        <span class="icon">
+          <i class="fa fa-database"></i>
+        </span>
+        <span>Kryptokrona</span>
+      </a>
+
+      <a href="http://chat.kryptokrona.se/" class="btn-default">
+        <span class="icon">
+          <i class="fab fa-discord"></i>
+        </span>
+        <span>Discord</span>
+      </a>
+
+      <a href="https://github.com/kryptokrona/kryptokrona-paperwallet-generator" class="btn-default">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Github</span>
+      </a>
+
+      <a href="webminer.html" class="btn-default">
+        <span class="icon">
+          <i class="fa fa-cubes"></i>
+        </span>
+        <span>WebMiner</span>
+      </a>
+
+      
+    </div>
     </header>
     </div>
 
@@ -28,9 +60,9 @@
       <div class="container">
 
         <div class="columns has-text-centered noprint">
-          <div class="column is-12 notification is-black has-text-centered noprint">
+          <div class="column is-12 notification has-text-centered noprint">
             <p class="noprint">Kryptokrona paper wallet generator <br>
-              <br>Anything on this page in a white colored box is <u><b>secret</u></b> and should not be
+              <br>Anything on this page in a light blue colored box is <u><b>secret</u></b> and should not be
               shared!</p>
           </div>
         </div>
@@ -43,9 +75,9 @@
         <div class="columns">
           <div class="column is-12 noprint has-text-centered">
 
-            <button class="button is-dark is-small d-print-noe" onclick="js:show_generate();" type="button"
+            <button class="btn-default d-print-noe" onclick="js:show_generate();" type="button"
               value="Generate a wallet">Create a Wallet</button>
-            <button class="button is-dark is-small noprint" onclick="js:show_restore();" type="button"
+            <button class="btn-default noprint" onclick="js:show_restore();" type="button"
               value="restore keys from seed phrase">Restore keys from seed</button>
 
             <div id="generate" style="display:none;">
@@ -60,7 +92,7 @@
              <br>
 
               <div>
-                <button class="button is-dark is-small " onclick="js:genwallet(null);" type="button"
+                <button class="btn-default " onclick="js:genwallet(null);" type="button"
                   value="Generate wallet">Generate</button>
               </div>
 
@@ -77,7 +109,7 @@
              <br>
 
               <div class="has-text-centered">
-                <button class="button is-dark is-small " onclick="js:restore_keys(null);" type="button"
+                <button class="btn-default " onclick="js:restore_keys(null);" type="button"
                   value="Restore keys">Restore Keys</button>
               </div>
             </div>
@@ -92,7 +124,7 @@
           </div>
           <div class="column is-12 d-print-block">
             <h3 class="subtitle is-size-6 d-print-block">Public Address</h3>
-            <div class="notification is-dark">
+            <div class="notificationSecret">
               <span style="font-family:monospace,monospace;word-break:break-all;"
                 id="address_widget">Generating...</span>
             </div>
@@ -102,7 +134,7 @@
         <div class="columns" id="step3" style="display:none;">
           <div class="column is-12">
             <h3 class="subtitle is-size-6 d-print-block">Seed Phrase</h3>
-            <div class="notification is-white">
+            <div class="notification">
               <span style="font-family:monospace,monospace;word-wrap:break-word;"
                 id="mnemonic_widget">Generating...</span>
             </div>
@@ -112,13 +144,13 @@
         <div class="columns" id="step4" style="display:none;">
           <div class="column is-12 d-print-block">
             <h3 class="subtitle is-size-6 d-print-block">View Key</h3>
-            <div class="notification is-white">
+            <div class="notification">
               <span style="font-family:monospace,monospace;word-break:break-all;"
                 id="view_key_widget">Generating...</span>
             </div>
 
             <h3 class="subtitle is-size-6 d-print-block">Spend Key</h3>
-            <div class="notification is-white">
+            <div class="notification">
               <span style="font-family:monospace,monospace;word-break:break-all;"
                 id="spend_key_widget">Generating...</span>
             </div>
@@ -127,48 +159,26 @@
 
         <div class="columns">
           <div class="column is-12 noprint has-text-centered">
-            <input type="button" onClick="window.print()" class="button is-dark is-small" value="Print your paper wallet" />
+            <input type="button" onClick="window.print()" class="btn-default" value="Print your paper wallet" />
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="hero is-black">
-      <div class="container is-black">
+    <footer class="hero is-fullheight">
+      <div class="container">
 
         <div class="column has-text-centered">
 
-          <div class="button is-dark is-small">
+          <div class="footer-info">
+
             All generation is done client side, no information is sent to any server.
-          </div>
-
-          <a href="http://chat.kryptokrona.se/" class="button is-dark is-small">
-            <span class="icon">
-              <i class="fab fa-discord"></i>
-            </span>
-            <span>Discord</span>
-          </a>
-
-          <a href="https://github.com/kryptokrona/kryptokrona-paperwallet-generator" class="button is-dark is-small">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-            <span>Github</span>
-          </a>
-
-          <a href="webminer.html" class="button is-dark is-small">
-            <span class="icon">
-              <i class="fa fa-cubes"></i>
-            </span>
-            <span>WebMiner</span>
-          </a>
-
-          <a href="https://kryptokrona.se/" class="button is-dark is-small">
-            <span class="icon">
-              <i class="fa fa-database"></i>
-            </span>
-            <span>Kryptokrona</span>
-          </a>
+            <br>
+            <br>
+            UX33 @ Kryptokrona
+          
+        </div>
+          
         </div>
       </div>
       </div>
