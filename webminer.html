@@ -5,16 +5,68 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Kryptokrona-Webminer</title>
+	<title>Kryptokrona Wallet Generator</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/styleminer.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () => {
+		  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+		  if ($navbarBurgers.length > 0) {
+			$navbarBurgers.forEach( el => {
+			  el.addEventListener('click', () => {
+				const target = el.dataset.target;
+				const $target = document.getElementById(target);
+				el.classList.toggle('is-active');
+				$target.classList.toggle('is-active');
+			  });
+			});
+		  }
+		});
+	  </script>
 </head>
 
 <body>
-	<br>
-	<br>
+	<section class="hero is-fullheight">
+	<div class="hero-head">
+	<header class="navbar">
+	  <div class="container">
+		<div class="navbar-brand">
+		  <a href="" class="navbar-item is-size-4"> </a>
+		  <span class="navbar-burger burger" data-target="navbarMenu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+		  </span>
+		</div>
+	
+		<div id="navbarMenu" class="navbar-menu">
+				<div class="navbar-start">
+				  <a href="index.html" class="navbar-item">
+					Main generator
+				  </a>
+	
+				  <a href="identicon.html" class="navbar-item">
+					Custom identicon
+				  </a>
+	
+				  <a href="check.html" class="navbar-item">
+					Address checker
+				  </a>
+				  <a href="webminer.html" class="navbar-item">
+					WebMiner
+				  </a>
+				</div>
+			  </div>
+			</div>
+		  </header>
+		</div>
+		<div class="main">
 	<div class="wrapper">
-		<img src="assets/img/icon.png" alt="kryptokrona-logo">
+		<img src="assets/img/icon.png" id="kryptokrona_logo" />
 		<br><br>
 
 		<input id="wallet" type="text" placeholder="Wallet address" value="">
@@ -37,7 +89,7 @@
 		</div>
 	</div>
 	<br>
-	<footer class="footer-info">
+	<div class="wrapper">
 		<h1>Kryptokrona webminer</h1>
 		<h2>Uses your computers CPU to mine Kryptokrona using the cn-pico algo. <br>
 			You can check your mining status by pasting your SEKR adress at the pool site. <br>
@@ -50,15 +102,52 @@
 			4-8 threads and 100% speed should do to start mining! <br>
 			Remember to keep your computer cool when mining. </h2>
 		<br>
-		<div class="footer-buttons">
-			<button onClick="parent.location='http://explorer.kryptokrona.se/'"> Explorer </button>
-			<button onClick="parent.location='http://pool.kryptokrona.se/'"> Pool </button>
-			<button onClick="parent.location='https://kryptokrona.se/paperwallet/'"> Paper Wallet </button>
 		</div>
-	</footer>
+
+	</div>
+
+		<footer class="hero-footer">
+     
+			<div class="container">
+			  <div class="columns">
+	
+				<div class="column has-text-center">
+				  Note: All generation is done client side, and no information is sent to the server <br>
+				</div>
+	
+				<div class="column is-6 has-text-right">
+	
+			  <a href="http://chat.kryptokrona.se/" class="btn-default">
+				<span class="icon">
+				  <i class="fab fa-discord"></i>
+				</span>
+	
+				<span>Discord</span>
+			  </a>
+	
+			  <a href="https://github.com/kryptokrona/kryptokrona-paperwallet-generator" class="btn-default">
+				<span class="icon">
+				  <i class="fab fa-github"></i>
+				</span>
+	
+				<span>Github</span>
+			  </a>
+	
+				</div>
+			  </div>
+			</div>
+	
+		</footer>
 	</div>
 	<script src='assets/js/kryptokronaminer.js'></script>
 	<script src='assets/js/config.js'></script>
+	<script type="text/javascript" src="./assets/js/jdenticon-settings.js"></script>
+    <script type="text/javascript" src="./assets/js/jdenticon-2.1.0.js"></script>
+    <script type="text/javascript" src="./assets/js/iframe-buster.js"></script>
+    
+    <script type="text/javascript" src="./assets/js/wallet.js"></script>
+    <script type="text/javascript" src="./assets/js/address-check.js"></script>
+    <script src="./assets/js/qrcode.js"></script>
 </body>
 
 </html>

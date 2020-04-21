@@ -21,7 +21,7 @@ body {
     border-radius: 10px;
 }
 
-.footer-info {
+. {
     width: 500px;
     background: rgb(1, 33, 55);
     padding-top: 100px;
@@ -125,4 +125,14 @@ h1 {
 h2 {
     font-weight: 100;
     font-size: 0.5rem;
+}
+
+#kryptokrona_logo{
+    width: 75px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
