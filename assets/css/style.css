@@ -530,6 +530,34 @@ pre {
   }
 }
 
+#icon{
+  background: transparent;
+}
+
 .testa{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
  
+}
+
+.testa,
+#check_results {
+  min-height: 270px;
+}
+.testa div{
+  
+  margin: 10px;
+  cursor: pointer;
+  
+}
+
+#div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
 }
