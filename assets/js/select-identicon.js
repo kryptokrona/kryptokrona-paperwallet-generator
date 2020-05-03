@@ -312,7 +312,7 @@ function doGenerateWallets() {
 function generateRandomWallet() {
   setTimeout(function () {
     wallets.push(genkeys());
-    if (wallets.length == 18)
+    if (wallets.length == 15)
       showWallets();
     else
       generateRandomWallet();
