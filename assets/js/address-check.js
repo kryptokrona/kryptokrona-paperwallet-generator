@@ -21,14 +21,14 @@ function checkAddress() {
 
   var address = document.getElementById("address").value;
   var address_info = cnUtil.validate_address(address);
-  
-  if(!address_info.valid) {
+
+  if (!address_info.valid) {
     notification.innerHTML = '<div class="column is-12 notification has-text-centered">Invalid XKR address!</div>';
     return;
   }
 
 
-    /**
+  /**
    * Identicon.js 2.3.3
    * http://github.com/stewartlord/identicon.js
    *
@@ -307,9 +307,9 @@ function checkAddress() {
   var errorCorrectionLevel = 'L';
 
   // fix scaling for integrated qr codes
-  
+
 
   // remove some unimportant info
   delete address_info.noprefix;
-  details_container.innerHTML = JSON.stringify(address_info,null,2);
+  details_container.innerHTML = JSON.stringify(address_info, null, 2);
 }

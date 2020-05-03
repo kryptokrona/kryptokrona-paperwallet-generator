@@ -331,7 +331,7 @@ function showWallets() {
     container.appendChild(icon);
 
     jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 200).toString() + '" width="150px" height="150px" />' + '<img/>');
-   
+
     icon.addEventListener("click", function (e) {
       showWallet(e.target.getAttribute("ID"));
     });
