@@ -2,7 +2,7 @@
 // Please see the included LICENSE file for more information.
 */
 
-html{
+html {
   background: rgb(1, 38, 63);
   height: 100%;
 }
@@ -17,13 +17,13 @@ body {
   margin: 0;
 }
 
-.input-div{
+.input-div {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
-.columnGen{
+.columnGen {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ body {
   align-content: center;
 }
 
-#input{
+#input {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
@@ -41,21 +41,22 @@ body {
   background-color: transparent;
 }
 
-.input, .textarea {
+.input,
+.textarea {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
   border: 1px solid #90f2ff8c;
-  box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
   max-width: 100%;
   width: 100%;
 }
 
-a:hover{
+a:hover {
   background: rgb(1, 33, 55);
   color: rgb(1, 33, 55);
 }
 
-.navbar-menu{
+.navbar-menu {
   padding-bottom: 2rem;
 }
 
@@ -63,12 +64,13 @@ a:hover{
   color: #90f2ff8c;
 }
 
-.navbar-start{
+.navbar-start {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
 
-.navbar-link, a.navbar-item:hover {
+.navbar-link,
+a.navbar-item:hover {
   cursor: pointer;
   background: rgb(1, 33, 55);
   color: #90f2ff;
@@ -83,14 +85,16 @@ a:hover{
   position: relative;
 }
 
-@media screen and (max-width: 1087px){
-.navbar-menu {
+@media screen and (max-width: 1087px) {
+  .navbar-menu {
     background-color: rgb(1, 38, 63);
     box-shadow: none;
     padding: .5rem 0;
-}}
+  }
+}
 
-.navbar-item, .navbar-link {
+.navbar-item,
+.navbar-link {
   color: #90f2ff8c;
   display: block;
   line-height: 1.5;
@@ -120,7 +124,7 @@ a:hover{
   padding-left: 0.5rem;
 }
 
-#hero{
+#hero {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
@@ -132,7 +136,7 @@ a:hover{
   position: relative;
 }
 
-.notificationSecret{
+.notificationSecret {
   background: #90f2ff8c;
   color: rgb(1, 33, 55);
   border-radius: 10px;
@@ -143,13 +147,16 @@ a:hover{
 
 
 
-*, ::after, ::before, ::-moz-focus-outer {
+*,
+::after,
+::before,
+::-moz-focus-outer {
   box-sizing: inherit;
   border: none;
   color: none;
 }
 
-.hero-footer{
+.hero-footer {
   background: rgb(1, 38, 63);
   padding: 2rem;
   border-radius: 10px;
@@ -163,19 +170,20 @@ a:hover{
 #check_results {
   min-height: 270px;
 }
-#select_identicon canvas{
+
+#select_identicon canvas {
   margin: 10px;
   cursor: pointer;
 }
 
-.menu{
-  background-color:rgb(1, 33, 55);
+.menu {
+  background-color: rgb(1, 33, 55);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.btn-default{
+.btn-default {
   background: rgb(1, 33, 55);
   border: none;
   color: #90f2ff8c;
@@ -184,17 +192,13 @@ a:hover{
   padding: 0.7rem;
   border-radius: 10px;
   cursor: pointer;
-   box-shadow: 1px 1px 20px 0px #000000;
-   -webkit-box-shadow: 1px 1px 20px 0px #000000;
-   -moz-box-shadow: 1px 1px 20px 0px #000000;
-   text-shadow: 1px 1px 20px #000000;
 }
 
-.btn-default:hover{
-  background:rgb(0, 47, 78);
+.btn-default:hover {
+  background: rgb(0, 47, 78);
 }
 
-.btn-default::checked{
+.btn-default::checked {
   border: none;
 }
 
@@ -215,17 +219,23 @@ a:hover{
 }
 
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #90f2ff8c;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #90f2ff8c;;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #90f2ff8c;
+  ;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: #90f2ff8c;;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #90f2ff8c;
+  ;
 }
 
 .print {
@@ -311,7 +321,7 @@ pre {
 
 @media print {
 
-  *{
+  * {
     color: #000;
   }
 
@@ -530,3 +540,40 @@ pre {
   }
 }
 
+#icon {
+  background: transparent;
+}
+
+.testa {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+
+
+}
+
+img {
+  pointer-events: none;
+}
+
+.testa,
+#check_results {
+  min-height: 270px;
+}
+
+.testa div {
+
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+#div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
