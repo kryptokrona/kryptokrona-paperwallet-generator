@@ -43,9 +43,9 @@ body {
 
 .input,
 .textarea {
-  background: rgb(33, 33, 33);
+  background: hsl(0, 0%, 16%);
   color: #f2f2f28c;
-  border: 1px solid #f2f2f28c;
+  border: 1px solid #f2f2f235;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
   max-width: 100%;
   width: 100%;
@@ -68,7 +68,7 @@ a:hover {
 .navbar-link,
 a.navbar-item:hover {
   cursor: pointer;
-  background: rgb(41, 41, 41);
+  background: rgb(19, 19, 19);
   color: #ffffffdc;
   display: flex;
   justify-content: center;
@@ -104,7 +104,7 @@ a.navbar-item:hover {
 
 #user_entropy_widget {
   background: rgb(41, 41, 41);
-  border: 1px solid #ffffffdc;
+  border: 1px solid #ffffff6e;
   color: #ffffffdc;
   border-radius: 5px;
 }
@@ -587,6 +587,11 @@ img {
   align-items: center;
 }
 
+.input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+  border-color: hsl(240, 1%, 32%);
+  box-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+}
+
 /* Light mode */
 @media (prefers-color-scheme: light) {
   body {
@@ -715,6 +720,20 @@ display: block;
 line-height: 1.5;
 padding: .5rem .75rem;
 position: relative;
+}
+
+.tingle-modal-box__content {
+  background: #eaeaeae8;
+  padding: 3rem 3rem;
+}
+
+.tingle-modal-box__footer {
+  padding: 1.5rem 2rem;
+  width: auto;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background: #eaeaeae8;
+  cursor: auto;
 }
 
 }
