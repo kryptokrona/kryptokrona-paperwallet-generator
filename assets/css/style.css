@@ -56,10 +56,6 @@ a:hover {
   color: rgb(41, 41, 41);
 }
 
-.navbar-menu {
-  
-}
-
 .navbar-brand {
   color: #f2f2f28c;
 }
@@ -300,6 +296,8 @@ pre {
 }
 
 .loading {
+  grid-column: 3;
+  align-content: center;
   width: 50px;
   height: 50px;
   border: 3px solid #5959593f;
