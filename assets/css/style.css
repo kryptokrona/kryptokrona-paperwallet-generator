@@ -765,3 +765,147 @@ position: relative;
       padding: .5rem 0;
   }}
 }
+
+.crt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.crtBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #FBBF2E;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 5px 5px 15px rgba(0,0,0,0.2);
+  -webkit-app-region: drag;
+  margin-bottom: 2rem;
+}
+
+.loginscanline {
+  
+  border-radius: 15px;
+}
+
+.crtBox img {
+  opacity: 0.8;
+  animation-duration: 0.01s;/*
+animation-name: imgflicker;
+animation-iteration-count: infinite;
+animation-direction: alternate;*/
+animation: flicker 0.000s infinite;
+}
+
+.crt .crtBox img{
+  padding-left: 0;
+  height: 33px !important;
+  animation-duration: 0.01s;
+    animation-name: textflickerr;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.crtBox::before, .crtBox::after {
+  display: block;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  }
+
+  .crtBox::before {
+  width: 100%;
+  height: 0px;
+  z-index: 2147483649;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  -webkit-animation: crtBox 6s linear infinite;
+          animation: crtBox 6s linear infinite;
+  }
+
+  .crtBox::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483648;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: crtBox 1s steps(60) infinite;
+          animation: crtBox 1s steps(60) infinite;
+  }
+
+  @-webkit-keyframes crtBox {
+    0% {
+      -webkit-transform: translate3d(0, 200000%, 0);
+              transform: translate3d(0, 200000%, 0);
+    }
+    }
+    @keyframes crtBox {
+    0% {
+      -webkit-transform: translate3d(0, 200000%, 0);
+              transform: translate3d(0, 200000%, 0);
+    }
+    }
+    @-webkit-keyframes crtBox {
+    0% {
+      background-position: 0 50%;
+    }
+    }
+    @keyframes crtBox {
+    0% {
+      background-position: 0 50%;
+    }
+    }
+
+
+    @keyframes flicker {
+      0% {opacity: 0.27861;}
+      5% {opacity: 0.34769;}
+      10% {opacity: 0.23604;}
+      15% {opacity: 0.90626;}
+      20% {opacity: 0.18128;}
+      25% {opacity: 0.83891;}
+      30% {opacity: 0.65583;}
+      35% {opacity: 0.67807;}
+      40% {opacity: 0.26559;}
+      45% {opacity: 0.84693;}
+      50% {opacity: 0.96019;}
+      55% {opacity: 0.08594;}
+      60% {opacity: 0.20313;}
+      65% {opacity: 0.71988;}
+      70% {opacity: 0.53455;}
+      75% {opacity: 0.37288;}
+      80% {opacity: 0.71428;}
+      85% {opacity: 0.70419;}
+      90% {opacity: 0.7003;}
+      95% {opacity: 0.36108;}
+      100% {opacity: 0.24387;}
+}
+@keyframes textflicker {
+from {
+text-shadow: 0.5px 0 0 #ea36af, -0.5px 0 0 #75fa69;
+}
+to {
+text-shadow: 0.5px 0.5px 0.5px #ea36af, -0.5px -0.5px 0.5px #75fa69;
+}
+}
+
+@keyframes imgflicker {
+from {
+-webkit-filter: drop-shadow( 1px 0px 0px #ea36af,  -2px 0 0 #75fa69);
+filter: drop-shadow( 1px 0px 0px #ea36af);
+}
+to {
+-webkit-filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
+filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
+}
+}
