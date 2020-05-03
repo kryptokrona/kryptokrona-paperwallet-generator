@@ -687,6 +687,13 @@ pre {
   padding-left: 0.5rem;
 }
 
+#seed_phrase {
+  background: #eaeaea;
+    border: 1px solid #2d2d2ddc;
+    color: #2d2d2ddc;
+    border-radius: 5px;
+}
+
 }
 
 /* Dark mode */
