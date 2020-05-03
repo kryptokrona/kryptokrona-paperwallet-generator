@@ -330,7 +330,7 @@ function showWallets() {
 
     container.appendChild(icon);
 
-    jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 200).toString() + '" width="150px" height="150px" />' + '<img/>')
+    jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 200).toString() + '" width="150px" height="150px" />' + '<img/>');
    
     icon.addEventListener("click", function (e) {
       showWallet(e.target.getAttribute("ID"));
@@ -346,7 +346,7 @@ function showWallet(i) {
   icon.setAttribute("ID", i);
   container.appendChild(icon);
 
-  jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 128).toString() + '" width="128px" height="128px" />' + '<img/>')
+  jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 128).toString() + '" width="128px" height="128px" />' + '<img/>');
 
   content.getElementsByClassName("identicon_widget")[0].appendChild(icon);
 

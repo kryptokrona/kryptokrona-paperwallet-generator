@@ -540,7 +540,12 @@ pre {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-content: center;
+  
  
+}
+
+img{
+  pointer-events: none; 
 }
 
 .testa,
