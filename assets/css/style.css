@@ -194,6 +194,7 @@ a.navbar-item:hover {
 
 .btn-default:hover {
   background: #1818188c;
+  color: rgb(232, 232, 232);
 }
 
 .btn-default::checked {
