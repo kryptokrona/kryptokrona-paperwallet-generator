@@ -172,9 +172,9 @@
   padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
-  background-color: rgb(1, 33, 55);
+  background-color: rgb(52, 52, 52);
   box-shadow: none;
-  color: #90f2ff8c;
+  color: #eaeaea;
   vertical-align: middle;
   text-decoration: none;
   font-size: inherit;
@@ -186,15 +186,15 @@
 }
 
 .tingle-btn--primary {
-  background-color: rgb(1, 33, 55);
+  background-color: rgb(52, 52, 52);
 }
 
 .tingle-btn--danger {
-  background-color: rgb(1, 33, 55);
+  background-color: rgb(52, 52, 52);
 }
 
 .tingle-btn--default {
-  background-color: rgb(1, 33, 55);
+  background-color: rgb(52, 52, 52);
 }
 
 .tingle-btn--pull-left {
