@@ -1,3 +1,8 @@
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 /**
  * Identicon.js 2.3.3
  * http://github.com/stewartlord/identicon.js
@@ -308,42 +313,15 @@ function showWallets() {
   show_new.disabled = false;
   container.innerHTML = '';
   for(var i = 0; i < wallets.length; i++) {
-
-    //old code for displaying Jdenticons
-
-    // var icon = document.createElement("canvas");
-    // icon.width = 128;
-    // icon.height = 128;
-    // icon.setAttribute("data-jdenticon-value", wallets[i].keys.public_addr);
-    // icon.setAttribute("data-i", i);
-    // container.appendChild(icon);
-    // jdenticon.update(icon);
-    // icon.addEventListener("click", function(e){
-    //   showWallet(e.target.getAttribute("data-i"));
-
-    // want to adapt the new code to display Identicons.
-
-    var icon = document.createElement("canvas");
-
-    //size
-    icon.width = 128;
-    icon.height = 128;
-    
-    icon.setAttribute("data-identicon-value", wallets[i].keys.public_addr);
-    icon.setAttribute("data-i", i);
-    
-    //Here is where i want to append my identicon icon
+    var icon = document.createElement("div");
+    icon.setAttribute("identicon-value", wallets[i].keys.public_addr);
+    icon.setAttribute("ID", i);
     container.appendChild(icon);
 
-    // this does print out correct identicons
-    // but they do not end up in the canvas container yet.
-    icon.append(data = new Identicon(wallets[i].keys.public_addr, {format: 'svg'}).toString(), document.write(
-      wallets[i].keys.public_addr + '<img src="data:image/svg+xml;base64,' + data + '">'
-        ));
+    jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 128).toString() + '" width="128px" height="128px" />' + '<img/>')
 
-     // Click on zhe icon to open modal    
     icon.addEventListener("click", function(e){
-      showWallet(e.target.getAttribute("data-i"));
+      showWallet(e.target.getAttribute("ID"));
     });
   }
 }
@@ -351,12 +329,12 @@ function showWallets() {
 function showWallet(i) {
   var wallet = wallets[i];
   var content = document.getElementById("modal_template").firstElementChild.cloneNode(true);
-  var icon = document.createElement("canvas");
-  icon.width = 128;
-  icon.height = 128;
-  icon.setAttribute("data-identicon-value", wallets[i].keys.public_addr);
-  icon.setAttribute("data-i", i);
-  icon.append(get_avatar(wallets[i].keys.public_addr, 255));
+  var icon = document.createElement("div");
+    icon.setAttribute("identicon-value", wallets[i].keys.public_addr);
+    icon.setAttribute("ID", i);
+    container.appendChild(icon);
+
+    jQuery(icon).append('<img src="' + get_avatar(wallets[i].keys.public_addr, 128).toString() + '" width="128px" height="128px" />' + '<img/>')
 
   content.getElementsByClassName("identicon_widget")[0].appendChild(icon);
 
