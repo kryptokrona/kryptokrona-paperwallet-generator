@@ -2,11 +2,6 @@
 //
 // Please see the included LICENSE file for more information.
 
-var script = document.createElement('script');
-script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
-
 var notification = document.getElementById("notification_container");
 var identicon_widget = document.getElementById("address_identicon_widget");
 var qr_widget = document.getElementById("address_qr_widget");
