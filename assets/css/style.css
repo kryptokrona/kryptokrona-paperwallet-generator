@@ -801,14 +801,14 @@ position: relative;
 animation-name: imgflicker;
 animation-iteration-count: infinite;
 animation-direction: alternate;*/
-animation: flicker 0.000s infinite;
+animation: flicker infinite;
 }
 
 .crt .crtBox img{
   padding-left: 0;
   height: 33px !important;
   animation-duration: 0.01s;
-    animation-name: textflickerr;
+    animation-name: imgflicker;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -822,12 +822,19 @@ animation: flicker 0.000s infinite;
 
   .crtBox::before {
   width: 100%;
-  height: 0px;
+  height: 2px;
   z-index: 2147483649;
   background: rgba(0, 0, 0, 0.3);
   opacity: 0.75;
-  -webkit-animation: crtBox 6s linear infinite;
-          animation: crtBox 6s linear infinite;
+  -webkit-animation: crtBox 4s linear infinite;
+          animation: crtBox 4s linear infinite;
+  }
+
+  .scanlines {
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 5px 5px 15px rgba(0,0,0,0.2);
+    -webkit-app-region: drag;
   }
 
   .crtBox::after {
@@ -855,12 +862,12 @@ animation: flicker 0.000s infinite;
               transform: translate3d(0, 200000%, 0);
     }
     }
-    @-webkit-keyframes crtBox {
+    @-webkit-keyframes crtBoxs {
     0% {
       background-position: 0 50%;
     }
     }
-    @keyframes crtBox {
+    @keyframes crtBoxs {
     0% {
       background-position: 0 50%;
     }
@@ -890,14 +897,7 @@ animation: flicker 0.000s infinite;
       95% {opacity: 0.36108;}
       100% {opacity: 0.24387;}
 }
-@keyframes textflicker {
-from {
-text-shadow: 0.5px 0 0 #ea36af, -0.5px 0 0 #75fa69;
-}
-to {
-text-shadow: 0.5px 0.5px 0.5px #ea36af, -0.5px -0.5px 0.5px #75fa69;
-}
-}
+
 
 @keyframes imgflicker {
 from {
