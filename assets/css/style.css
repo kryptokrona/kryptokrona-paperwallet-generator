@@ -645,7 +645,14 @@ a.navbar-item {
   }
 
   #user_entropy_widget {
-    background: #f7f7f7;
+    background: #f7f7f7!important;
+    border: 1px solid #2d2d2d34;
+    color: #2d2d2da9;
+    border-radius: 5px;
+  }
+
+  #seed_phrase{
+    background: #f7f7f7!important;
     border: 1px solid #2d2d2d34;
     color: #2d2d2da9;
     border-radius: 5px;
@@ -682,9 +689,9 @@ a.navbar-item {
 
   .input,
   .textarea {
-    background: #eaeaea;
+    background: #f7f7f7!important;;
     color: rgb(12, 12, 12);
-    border: 1px solid rgb(12, 12, 12);
+    border: 1px solid rgba(18, 18, 18, 0.377);
     box-shadow: none;
     max-width: 100%;
     width: 100%;
@@ -692,7 +699,7 @@ a.navbar-item {
 
   pre {
     -webkit-overflow-scrolling: touch;
-    background-color: #eaeaea;
+    background-color: #f7f7f7!important;;
     color: rgb(12, 12, 12);
     font-size: .875em;
     overflow-x: auto;
