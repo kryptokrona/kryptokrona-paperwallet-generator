@@ -793,6 +793,21 @@ a.navbar-item {
   padding: 1rem;
 }
 
+.gradient{
+  padding: 3rem;
+  width: 300px auto;
+  position: relative;
+  overflow: hidden;
+  font-family: monospace;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.493);
+  border-radius: 10px;
+  background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+  background-size: 1000% 1000%!important;
+  -webkit-animation: AnimationName 60s ease infinite;
+  -moz-animation: AnimationName 60s ease infinite;
+  animation: AnimationName 60s ease infinite alternate;
+}
+
 .gradient img {
   height: 36px !important;
   opacity: 0.9;
@@ -802,27 +817,6 @@ a.navbar-item {
   animation-direction: alternate;
 }
 
-@keyframes imgflicker {
-  from {
-    -webkit-filter: drop-shadow(1px 0px 0px #ea36af, -2px 0 0 #75fa69);
-    filter: drop-shadow(1px 0px 0px #ea36af);
-  }
-
-  to {
-    -webkit-filter: drop-shadow(2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
-    filter: drop-shadow(2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
-  }
-}
-
-@keyframes textflicker {
-  from {
-    text-shadow: 2px 0 0 #eb77c4, -1px 0 0 #88e97f;
-  }
-
-  to {
-    text-shadow: 0.9px 0.5px 0.5px #f79cd9, -0.9px -0.5px 0.5px #a0eb99;
-  }
-}
 h6 {
   font-size: 14px;
   margin-top: 2rem;
@@ -833,22 +827,6 @@ h6 {
   animation-name: textflicker;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-.gradient{
-  padding: 3rem;
-  width: 300px auto;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  font-family: monospace;
-  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.493);
-  border-radius: 10px;
-  background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
-  background-size: 1000% 1000%!important;
-  -webkit-animation: AnimationName 60s ease infinite;
-  -moz-animation: AnimationName 60s ease infinite;
-  animation: AnimationName 60s ease infinite alternate;
 }
 
 @-webkit-keyframes AnimationName {
@@ -867,6 +845,15 @@ h6 {
     100%{background-position:0% 50%}
 }
 
+@keyframes textflicker {
+  from {
+    text-shadow: 2px 0 0 #eb77c4, -1px 0 0 #88e97f;
+  }
+
+  to {
+    text-shadow: 0.9px 0.5px 0.5px #f79cd9, -0.9px -0.5px 0.5px #a0eb99;
+  }
+}
 
 
 @keyframes flicker {
@@ -953,4 +940,87 @@ h6 {
   100% {
     opacity: 0.24387;
   }
+}
+
+.scanlines {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-app-region: drag;
+}
+
+body {
+  -webkit-app-region: drag
+}
+
+.fullwindow {
+  -webkit-app-region: drag
+}
+
+.scanlines::before,
+.scanlines::after {
+  display: block;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+}
+
+.scanlines::before {
+  width: 100%;
+  height: 2px;
+  z-index: 2147483649;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  -webkit-animation: scanline 6s linear infinite;
+  animation: scanline 6s linear infinite;
+}
+
+.scanlines::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483648;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: scanlines 1s steps(60) infinite;
+  animation: scanlines 1s steps(60) infinite;
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@-webkit-keyframes scanline {
+  0% {
+    -webkit-transform: translate3d(0, 200000%, 0);
+    transform: translate3d(0, 200000%, 0);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    -webkit-transform: translate3d(0, 200000%, 0);
+    transform: translate3d(0, 200000%, 0);
+  }
+}
+
+@-webkit-keyframes scanlines {
+  0% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 50%;
+  }
+}
+
+.loginscanline {
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.welcomescanline {
+  max-width: 260px;
+  left: calc(50% - 130px);
 }
