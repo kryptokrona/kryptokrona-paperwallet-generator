@@ -12,9 +12,6 @@ body {
   background: rgb(21, 21, 21);
   color: #f2f2f28c;
   font-weight: 300;
-  overflow-y: visible;
-  overflow-x: visible;
-  margin: 0;
 }
 
 .input-div {
@@ -380,7 +377,7 @@ pre {
     width: 260px;
     height: 165px;
     font-size: 10px;
-    color: #ffffff;
+    color: #000;
     font-weight: 500;
     letter-spacing: 0.05em;
   }
@@ -411,7 +408,7 @@ pre {
     width: 260px;
     height: 165px;
     font-size: 32px;
-    color: #ffffff;
+    color: #000;
     font-weight: 500;
     letter-spacing: 0.05em;
   }
@@ -430,7 +427,7 @@ pre {
     position: absolute;
     height: 20px;
     font-size: 10px;
-    color: #ffffff;
+    color: #000;
     font-weight: 500;
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -796,97 +793,65 @@ a.navbar-item {
   padding: 1rem;
 }
 
-.crtBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.gradient{
   padding: 3rem;
-  color: black;
-  font-family: monospace;
-  font-weight: 700;
-  opacity: 1 !important;
-  background-color: #FBBF2E;
-  border-radius: 10px;
-  border: none;
-  width: 350px auto;
+  width: 300px auto;
   position: relative;
   overflow: hidden;
+  font-family: monospace;
   box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.493);
-  -webkit-app-region: drag;
-  margin-bottom: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+  background-size: 1000% 1000%!important;
+  -webkit-animation: AnimationName 60s ease infinite;
+  -moz-animation: AnimationName 60s ease infinite;
+  animation: AnimationName 60s ease infinite alternate;
 }
 
-
-.crtBox img {
-  opacity: 0.8;
-  animation-duration: 0.01s;
-  animation: flicker infinite;
-}
-
-.crt .crtBox img {
-  padding-left: 0;
-  height: 33px !important;
+.gradient img {
+  height: 36px !important;
+  opacity: 0.9;
   animation-duration: 0.01s;
   animation-name: imgflicker;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-.crtBox::before,
-.crtBox::after {
-  display: block;
-  pointer-events: none;
-  content: '';
-  position: absolute;
+h6 {
+  font-size: 14px;
+  margin-top: 2rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87) !important;
+  opacity: 0.7;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.crtBox::before {
-  width: 100%;
-  height: 2px;
-  z-index: 2147483649;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-  -webkit-animation: crtBox 4s linear infinite;
-  animation: crtBox 4s linear infinite;
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
-.crtBox::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2147483648;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
-  background-size: 100% 4px;
-  -webkit-animation: crtBox 1s steps(60) infinite;
-  animation: crtBox 1s steps(60) infinite;
-}
-
-@-webkit-keyframes crtBox {
-  0% {
-    -webkit-transform: translate3d(0, 200000%, 0);
-    transform: translate3d(0, 200000%, 0);
+@keyframes textflicker {
+  from {
+    text-shadow: 2px 0 0 #eb77c4, -1px 0 0 #88e97f;
   }
-}
 
-@keyframes crtBox {
-  0% {
-    -webkit-transform: translate3d(0, 200000%, 0);
-    transform: translate3d(0, 200000%, 0);
-  }
-}
-
-@-webkit-keyframes crtBoxs {
-  0% {
-    background-position: 0 50%;
-  }
-}
-
-@keyframes crtBoxs {
-  0% {
-    background-position: 0 50%;
+  to {
+    text-shadow: 0.9px 0.5px 0.5px #f79cd9, -0.9px -0.5px 0.5px #a0eb99;
   }
 }
 
@@ -977,37 +942,85 @@ a.navbar-item {
   }
 }
 
-h6 {
-  font-size: 14px;
-  margin-top: 2rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.87) !important;
-  animation-duration: 0.01s;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  opacity: 0.8;
+.scanlines {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-app-region: drag;
 }
 
+body {
+  -webkit-app-region: drag
+}
 
-@keyframes imgflicker {
-  from {
-    -webkit-filter: drop-shadow(1px 0px 0px #ea36af, -2px 0 0 #75fa69);
-    filter: drop-shadow(1px 0px 0px #ea36af);
-  }
+.fullwindow {
+  -webkit-app-region: drag
+}
 
-  to {
-    -webkit-filter: drop-shadow(2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
-    filter: drop-shadow(2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
+.scanlines::before,
+.scanlines::after {
+  display: block;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+}
+
+.scanlines::before {
+  width: 100%;
+  height: 2px;
+  z-index: 2147483649;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  -webkit-animation: scanline 6s linear infinite;
+  animation: scanline 6s linear infinite;
+}
+
+.scanlines::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483648;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: scanlines 1s steps(60) infinite;
+  animation: scanlines 1s steps(60) infinite;
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@-webkit-keyframes scanline {
+  0% {
+    -webkit-transform: translate3d(0, 200000%, 0);
+    transform: translate3d(0, 200000%, 0);
   }
 }
 
-@keyframes textflicker {
-  from {
-    text-shadow: 2px 0 0 #eb77c4, -1px 0 0 #88e97f;
+@keyframes scanline {
+  0% {
+    -webkit-transform: translate3d(0, 200000%, 0);
+    transform: translate3d(0, 200000%, 0);
   }
+}
 
-  to {
-    text-shadow: 0.9px 0.5px 0.5px #f79cd9, -0.9px -0.5px 0.5px #a0eb99;
+@-webkit-keyframes scanlines {
+  0% {
+    background-position: 0 50%;
   }
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 50%;
+  }
+}
+
+.loginscanline {
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.welcomescanline {
+  max-width: 260px;
+  left: calc(50% - 130px);
 }
